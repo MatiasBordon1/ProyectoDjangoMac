@@ -1,0 +1,12 @@
+{% extends 'Main/base.html' %}
+{% block title %}Detalle{% endblock %}
+{% block content_title %}Vista en detalle de la publicación{% endblock %}
+
+{% block content %}
+<ul>
+    <li><strong>Título:</strong> {{ object.titulo }}</li>
+    <li><strong>Contenido:</strong> {{ object.contenido }}</li>
+    <li><strong>Fecha:</strong> {{ object.fecha_publicacion }}</li>
+</ul>
+<a href="{% url 'blog:post_list' %}" class="btn btn-secondary">Volver</a>
+{% endblock %}

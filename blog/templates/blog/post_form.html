@@ -1,0 +1,12 @@
+{% extends 'Main/base.html' %}
+{% block title %}Formulario{% endblock %}
+{% block content_title %}Formulario de Publicación{% endblock %}
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">Guardar</button>
+    <a href="{% url 'blog:post_list' %}" class="btn btn-secondary">Cancelar</a>
+</form>
+{% endblock %}
